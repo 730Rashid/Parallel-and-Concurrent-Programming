@@ -8,13 +8,17 @@
 
 **Question:**
 
-Locate the Solution Explorer within Visual Studio and select the HelloWorld project.
+Exercise 1: Set up CUDA Project in Visual Studio 2022
 
-Right click on this project and select Build. This should compile and link the project.
+Exercise 2: Understanding the CUDA Programming Model
 
-Now run the HelloWorld program.
+Exercise 3: Refactoring for Heterogeneous Understanding
 
-Change between Debug and Release mode. Compile again and rerun the program.
+Exercise 4: Error Handling and Synchronization
+
+Exercise 5: Performance Profiling
+
+
 
 **Solution:**
 {1,2,3,4,5} + {10,20,30,40,50} = {11,22,33,44,55}
@@ -109,12 +113,25 @@ Error:
 }
 
 **Test data:**
+arraySize = 1000
+{1,2,3,4,5} + {10,20,30,40,50} = {11,22,33,44,55},
 
+arraySize = 50
 {1,2,3,4,5} + {10,20,30,40,50} = {11,22,33,44,55}
+
+
 
 **Sample output:**
 
+Launching Kernel...
+Time taken: 0.681696 ms
 {1,2,3,4,5} + {10,20,30,40,50} = {11,22,33,44,55}
+
+
+Launching Kernel...
+Time taken: 16.411648 ms
+{1,2,3,4,5} + {10,20,30,40,50} = {11,22,33,44,55}
+
 
 **Reflection:**
 
@@ -124,11 +141,13 @@ and threads we want.
 
 *Did you make any mistakes?*
 
-*In what way has your knowledge improved?*
+I did have some issues when doing the fifth excercise where I had trouble pasted the code from the lab where we can record the execution time. it was pretty much a trial and error until I got it to work. I forgot to set the device using cudaSetDevice(0) which caused an error when trying to allocate memory on the GPU. 
+After adding that line the code worked properly. I also had some trouble with copying the data back from the device to the host, I had to check the lab sheet again to make sure I was using cudaMemcpy with the correct parameters aswell as the hints given.
+
 
 **Questions:**
 
-*Is there anything you would like to ask?*
+No questions thank you.
 
 ### Q2. Console Window
 

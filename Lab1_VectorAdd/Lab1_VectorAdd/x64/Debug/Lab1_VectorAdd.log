@@ -1,8 +1,71 @@
 ﻿  Compiling CUDA source file kernel.cu...
   
-  C:\Users\756670\OneDrive - hull.ac.uk\Year 3\Parallel and Concurrent Programming\Lab1_VectorAdd\Lab1_VectorAdd>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include"  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o "C:\Users\756670\OneDrive - hull.ac.uk\Year 3\Parallel and Concurrent Programming\Lab1_VectorAdd\Lab1_VectorAdd\x64\Debug\kernel.cu.obj" "C:\Users\756670\OneDrive - hull.ac.uk\Year 3\Parallel and Concurrent Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu" 
+  C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include"  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\x64\Debug\kernel.cu.obj "C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu" 
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(38): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(45): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(51): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(57): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(66): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(72): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(38): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(45): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(51): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(57): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(66): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
+C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu(72): warning #546-D: transfer of control bypasses initialization of:
+              variable "milliseconds" (declared at line 94)
+            goto Error;
+            ^
+  
 CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
   kernel.cu
-  tmpxft_00006770_00000000-7_kernel.cudafe1.cpp
-tmpxft_00006770_00000000-7_kernel.cudafe1.stub.c(2): error C2471: cannot update program database 'C:\Users\756670\OneDrive - hull.ac.uk\Year 3\Parallel and Concurrent Programming\Lab1_VectorAdd\Lab1_VectorAdd\x64\Debug\vc143.pdb'
-C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\BuildCustomizations\CUDA 12.9.targets(801,9): error MSB3721: The command ""C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include"  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o "C:\Users\756670\OneDrive - hull.ac.uk\Year 3\Parallel and Concurrent Programming\Lab1_VectorAdd\Lab1_VectorAdd\x64\Debug\kernel.cu.obj" "C:\Users\756670\OneDrive - hull.ac.uk\Year 3\Parallel and Concurrent Programming\Lab1_VectorAdd\Lab1_VectorAdd\kernel.cu"" exited with code 2.
+  tmpxft_00006260_00000000-7_kernel.cudafe1.cpp
+  Lab1_VectorAdd.vcxproj -> C:\Users\756670\Documents\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\x64\Debug\Lab1_VectorAdd.exe

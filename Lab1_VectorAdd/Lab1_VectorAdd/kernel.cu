@@ -1,5 +1,4 @@
-﻿
-#include "cuda_runtime.h"
+﻿#include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 
 #include <stdio.h>
@@ -15,7 +14,7 @@ __global__ void addKernel(int *c, const int *a, const int *b)
 int main()
 {
     // 1. HOST: Initialize Data [cite: 117]
-    const int arraySize = 5;
+    const int arraySize = 50;
     const int a[arraySize] = { 1, 2, 3, 4, 5 };
     const int b[arraySize] = { 10, 20, 30, 40, 50 };
     int c[arraySize] = { 0 };
@@ -30,7 +29,7 @@ int main()
     // 2. HOST -> DEVICE: Allocate and Copy
     // TODO: Allocate memory on the GPU for a, b, and c using cudaMalloc [cite: 129]
     // Hint: cudaMalloc((void**)&dev_a, arraySize * sizeof(int));
-    
+
     cudaError_t cudaStatus;
     cudaStatus = cudaSetDevice(0);
     if (cudaStatus != cudaSuccess)
@@ -46,7 +45,7 @@ int main()
         goto Error;
     }
 
-    cudaStatus = cudaMalloc((void**)&dev_a, arraySize * sizeof(int));
+    cudaStatus = cudaMalloc((void**)&dev_c, arraySize * sizeof(int));
     if (cudaStatus != cudaSuccess) {
         fprintf(stderr, "cudaMalloc failed!");
         goto Error;
@@ -73,18 +72,39 @@ int main()
         goto Error;
     }
 
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
     // 3. DEVICE: Compute
     // TODO: Launch the kernel with 1 block and 5 threads [cite: 138]
 
     printf("Launching Kernel...\n");
+    cudaEventRecord(start);
+
     addKernel<<<1, arraySize >>>(dev_c, dev_a, dev_b);
+
+    cudaEventRecord(stop);
 
     // TODO: Wait for the GPU to finish [cite: 148]
     cudaDeviceSynchronize();
+    cudaEventSynchronize(stop);
+
+    
+    float milliseconds = 0;
+    cudaEventElapsedTime(&milliseconds, start, stop);
+    printf("Time taken: %f ms\n", milliseconds);
 
     // 4. DEVICE -> HOST: Copy Back
     // TODO: Copy the result 'dev_c' back to host array 'c' [cite: 149]
     // Hint: Use cudaMemcpyDeviceToHost
+    
+    cudaStatus = cudaMemcpy(c, dev_c, arraySize * sizeof(int), cudaMemcpyDeviceToHost);
+    if (cudaStatus != cudaSuccess) {
+        fprintf(stderr, "cudaMemcpy failed!");
+        goto Error;
+    }
+
     // Cleanup: Free GPU memory [cite: 151-153]
 
 Error:
