@@ -41,11 +41,11 @@ int main(int, char**) {
 I learnt how to a create folder called "hello_world" and opened up a new terminal to cd inside the folder. I inspected the .rust file where main function has aready been defined with the "Hello_world" output in it and i ran the program using "cargo init" in the terminal.  
 
 *Did you make any mistakes?*
--I accidently entered "cargo init" when trying to run my program instead of "cargo run"
+-I accidently entered "cargo init" when trying to run my program instead of "cargo run". A minior mistake but I realised you cant initialise cargo within it.
 
 
 *In what way has your knowledge improved?*
-I know undersstand how to print hello world in Rust and how to exeucte the script using cargo init in the terminal 
+I now understand how to print hello world in Rust and how to exeucte the script using cargo init in the terminal. I also learnt that Rust is a language similar to C++ except it is very strict in terms of data. for example if you initialise a variable it is a const unless you write "mus" just before declaring the variable name. 
 
 **Questions:**
 

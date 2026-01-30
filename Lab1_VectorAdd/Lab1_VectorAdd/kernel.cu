@@ -71,9 +71,15 @@ int main()
         fprintf(stderr, "cudaMemcpy failed!");
         goto Error;
     }
+    cudaStatus = cudaMemcpy(dev_c, c, arraySize * sizeof(int), cudaMemcpyHostToDevice);
+    if (cudaStatus != cudaSuccess) {
+        fprintf(stderr, "cudaMemcpy failed!");
+        goto Error;
+    }
 
     cudaEvent_t start, stop;
     cudaEventCreate(&start);
+
     cudaEventCreate(&stop);
 
     // 3. DEVICE: Compute
@@ -88,10 +94,12 @@ int main()
 
     // TODO: Wait for the GPU to finish [cite: 148]
     cudaDeviceSynchronize();
+
     cudaEventSynchronize(stop);
 
     
     float milliseconds = 0;
+
     cudaEventElapsedTime(&milliseconds, start, stop);
     printf("Time taken: %f ms\n", milliseconds);
 
