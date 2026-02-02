@@ -8,23 +8,23 @@
 
 **Question:**
 
-Question 1: Set up CUDA Project in Visual Studio 2022
+Set up CUDA Project in Visual Studio 2022
     - Setup necessary files inside VS
 
-Question 2: Understanding the CUDA Programming Model
-    Cuda has a very strict workflow that needs to be followed:
+Understanding the CUDA Programming Model
+    Cuda has a very strict workflow that needs to be followed from top to bottom:
         - Create Data
         - Pass Data
         - Compute 
         - Retrieve Data
 
-Question 3: Refactoring for Heterogeneous Understanding
+Refactoring for Heterogeneous Understanding
     CUDA uses a function called addwithCuda() which does the complex things for us but we need to understand the Host and Device workflow manually.
 
-Question 4: Error Handling and Synchronization
+Error Handling and Synchronization
     - Understand CUDA functions to find out whether the script ran successfully or if it was a failure. Understand the best way to implement them.
 
-Question 5: Performance Profiling
+Performance Profiling
     - Understand how parallelism works in my code by changing values of variables and re-running the script. 
 
 
@@ -172,7 +172,7 @@ Time taken: 16.411648 ms
 
 *Reflect on what you have learnt from this exercise.*
 
-I have learnt how to make a new CUDA solution in Visual Studio 2022. I followed the lab sheet on canvas which explains in detail what the pre-written code does and how it works. For example the __Global__ tells us that the funtion runs on the GPU but is called from the CPU. The function "addKernal" is where we have to specify how many blocks and threads we want. 
+-I have learnt how to make a new CUDA solution in Visual Studio 2022. I followed the lab sheet on canvas which explains in detail what the pre-written code does and how it works. For example the __Global__ tells us that the funtion runs on the GPU but is called from the CPU. The function "addKernal" is where we have to specify how many blocks and threads we want. 
 
 -- Cudamaloc() is a pre-built function that allocates memory on the GPU VRAM which is then processed by the kernals on the GPU. And i called the funtion for each pointer dev_a, dev_b, dev_c. 
 
@@ -182,7 +182,7 @@ I have learnt how to make a new CUDA solution in Visual Studio 2022. I followed 
 
 -- cudeFree() is also a pre-built function to deallocate memory on the GPU that was used by cudaMalloc.
 
-The opening of the CUDA file as I create the file is really good as you can understand how each part of the code works behind the scenes and how each function is worked and when to use them. The part I liked the most was the "Refactoring for Heterogeneous Understanding" where I was able to dive a little deeper and understand how Host and Device works and how to allocate them and when. I also liked how the CUDA workdlow is strict where I had to follow this "Create Data -> Pass Data -> Compute -> Retrieve Data". This has given me enough information to work with the second CUDA lab.
+-The opening of the CUDA file as I create the file is really good as you can understand how each part of the code works behind the scenes and how each function is worked and when to use them. The part I liked the most was the "Refactoring for Heterogeneous Understanding" where I was able to dive a little deeper and understand how Host and Device works and how to allocate them and when. I also liked how the CUDA workdlow is strict where I had to follow this "Create Data -> Pass Data -> Compute -> Retrieve Data". This has given me enough information to work with the second CUDA lab.
 
 
 
