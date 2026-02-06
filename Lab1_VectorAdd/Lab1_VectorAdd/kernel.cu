@@ -7,8 +7,19 @@ cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size);
 
 __global__ void addKernel(int *c, const int *a, const int *b)
 {
-    int i = threadIdx.x;
-    c[i] = a[i] + b[i];
+    // Compute global thread index for 2D grid and 2D blocks
+    
+    int blockIdx_linear = blockIdx.y * gridDim.x + blockIdx.x;
+
+    int threadIdx_linear = threadIdx.y * blockDim.x + threadIdx.x;
+
+    int i = blockIdx_linear * (blockDim.x * blockDim.y) + threadIdx_linear;
+    
+    // Make sure we dont go out of bounds
+    if (i < 50)  
+    {
+        c[i] = a[i] + b[i];
+    }
 }
 
 int main()
@@ -88,7 +99,17 @@ int main()
     printf("Launching Kernel...\n");
     cudaEventRecord(start);
 
-    addKernel<<<1, arraySize >>>(dev_c, dev_a, dev_b);
+    // addKernel<<<1, arraySize >>>(dev_c, dev_a, dev_b);
+
+    /*addKernel << <2, dim3(3, 2) >> > (dev_c, dev_a, dev_b);
+    addKernel << <2, dim3(3, 3) >> > (dev_c, dev_a, dev_b);
+    addKernel << <2, dim3(2, 1) >> > (dev_c, dev_a, dev_b);
+    addKernel << <2, dim3(3, 2) >> > (dev_c, dev_a, dev_b);
+    addKernel << <3, dim3(3, 3) >> > (dev_c, dev_a, dev_b);*/
+
+    addKernel << <dim3(2, 3), dim3(2, 2) >> > (dev_c, dev_a, dev_b);
+
+    
 
     cudaEventRecord(stop);
 
@@ -177,7 +198,7 @@ cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
     }
 
     // Launch a kernel on the GPU with one thread for each element.
-    addKernel<<<1, size>>>(dev_c, dev_a, dev_b);
+    // addKernel<<<1, size>>>(dev_c, dev_a, dev_b);
 
     // Check for any errors launching the kernel
     cudaStatus = cudaGetLastError();

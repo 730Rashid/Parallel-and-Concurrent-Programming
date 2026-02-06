@@ -78,6 +78,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="kernel_tests.cu" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Lab_Book.md" />

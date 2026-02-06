@@ -32,8 +32,8 @@ Performance Profiling
 **Solution:**
 {1,2,3,4,5} + {10,20,30,40,50} = {11,22,33,44,55}
 
-int main()
-{
+    int main()
+    {
     // 1. HOST: Initialize Data [cite: 117]
     const int arraySize = 50;
     const int a[arraySize] = { 1, 2, 3, 4, 5 };
@@ -126,7 +126,7 @@ int main()
     // TODO: Copy the result 'dev_c' back to host array 'c' [cite: 149]
     // Hint: Use cudaMemcpyDeviceToHost
     
-    cudaStatus = cudaMemcpy(c, dev_c, arraySize * sizeof(int), cudaMemcpyDeviceToHost);
+    cudaStatus = cudaMemcpy(c, dev_c, arraySize * sizeof(int), cudaMemcpyDeviceToHost); 
     if (cudaStatus != cudaSuccess) {
         fprintf(stderr, "cudaMemcpy failed!");
         goto Error;
@@ -134,10 +134,12 @@ int main()
 
     // Cleanup: Free GPU memory [cite: 151-153]
 
-Error:
-    cudaFree(dev_c);
-    cudaFree(dev_a);
-    cudaFree(dev_b);
+    Error:
+        cudaFree(dev_c);
+        cudaFree(dev_a);
+        cudaFree(dev_b);
+
+    # frees memory
 
 
     // Verify Result
@@ -174,6 +176,8 @@ Time taken: 16.411648 ms
 
 -I have learnt how to make a new CUDA solution in Visual Studio 2022. I followed the lab sheet on canvas which explains in detail what the pre-written code does and how it works. For example the __Global__ tells us that the funtion runs on the GPU but is called from the CPU. The function "addKernal" is where we have to specify how many blocks and threads we want. 
 
+Functions: 
+
 -- Cudamaloc() is a pre-built function that allocates memory on the GPU VRAM which is then processed by the kernals on the GPU. And i called the funtion for each pointer dev_a, dev_b, dev_c. 
 
 -- cudaMemcpy() is also a pre-built function where it transfers data from the CPU to the GPU. I did this for all 3 variables so speed up compute as the GPU is much faster than the CPU.
@@ -181,6 +185,10 @@ Time taken: 16.411648 ms
 -- cudaEvent() is also a pre-built function to monitor GPU's progress and accurately measure time.
 
 -- cudeFree() is also a pre-built function to deallocate memory on the GPU that was used by cudaMalloc.
+
+-- cudaEventSynchronize() is a pre-built function waits until the GPU has finished doing its given tasks.
+
+Error handling: After every step within cuda we need to check to see if we have ran into an error and by doing that we declare an cudaError variable and use an if statement to see against cudaSuccess. 
 
 -The opening of the CUDA file as I create the file is really good as you can understand how each part of the code works behind the scenes and how each function is worked and when to use them. The part I liked the most was the "Refactoring for Heterogeneous Understanding" where I was able to dive a little deeper and understand how Host and Device works and how to allocate them and when. I also liked how the CUDA workdlow is strict where I had to follow this "Create Data -> Pass Data -> Compute -> Retrieve Data". This has given me enough information to work with the second CUDA lab.
 
@@ -198,6 +206,10 @@ I also had some trouble with copying the data back from the device to the host, 
 *In what way has your knowledge improved?*
 
 I now understand most of what the pre-coded CUDA script looks like and how most the functions work and when they're called. I know how to use addKernal() and specify the number threads and blocks inside <<< >>>. I also understand why CUDA is used and the purpose it serves. I also understand that CUDA follows a very strict workflow which is "Create Data -> Pass Data -> Compute -> Retrieve Data."
+
+I have also learned that its best practice to check for errors after each process to see if there are any errors present so we can identify the error and fix the specific one.
+
+I have learnt that the computation happens on the GPU and after it is done processing we need to send the result back to the CPU so we can print them.
 
 
 

@@ -1,4 +1,4 @@
-Identity=kernel.cu
+Identity=kernel_tests.cu
 AdditionalCompilerOptions=
 AdditionalCompilerOptions=
 AdditionalDependencies=
@@ -8,7 +8,7 @@ AdditionalOptions=
 AdditionalOptions=
 CodeGeneration=compute_52,sm_52
 CodeGeneration=compute_52,sm_52
-CompileOut=C:\Users\756670\source\repos\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\x64\Debug\kernel.cu.obj
+CompileOut=C:\Users\756670\source\repos\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\Lab1_VectorAdd\x64\Debug\kernel_tests.cu.obj
 CudaRuntime=Static
 CudaToolkitCustomDir=
 DebugInformationFormat=ProgramDatabase
