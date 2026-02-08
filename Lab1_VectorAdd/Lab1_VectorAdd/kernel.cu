@@ -3,28 +3,23 @@
 
 #include <stdio.h>
 
-cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size);
+// cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size);
 
 __global__ void addKernel(int *c, const int *a, const int *b)
 {
-    // Compute global thread index for 2D grid and 2D blocks
-    
-    int blockIdx_linear = blockIdx.y * gridDim.x + blockIdx.x;
+    int i = threadIdx.x;
 
-    int threadIdx_linear = threadIdx.y * blockDim.x + threadIdx.x;
+    printf("blockIdx.x = %d, threadIdx.x = %d -> Global Index i = %d\n",
+           blockIdx.x, threadIdx.x, i);
 
-    int i = blockIdx_linear * (blockDim.x * blockDim.y) + threadIdx_linear;
-    
-    // Make sure we dont go out of bounds
-    if (i < 50)  
-    {
+    if (i < 50) {
         c[i] = a[i] + b[i];
     }
 }
 
 int main()
 {
-    // 1. HOST: Initialize Data [cite: 117]
+    // 1. HOST: Initialise Data [cite: 117]
     const int arraySize = 50;
     const int a[arraySize] = { 1, 2, 3, 4, 5 };
     const int b[arraySize] = { 10, 20, 30, 40, 50 };
@@ -99,15 +94,7 @@ int main()
     printf("Launching Kernel...\n");
     cudaEventRecord(start);
 
-    // addKernel<<<1, arraySize >>>(dev_c, dev_a, dev_b);
-
-    /*addKernel << <2, dim3(3, 2) >> > (dev_c, dev_a, dev_b);
-    addKernel << <2, dim3(3, 3) >> > (dev_c, dev_a, dev_b);
-    addKernel << <2, dim3(2, 1) >> > (dev_c, dev_a, dev_b);
-    addKernel << <2, dim3(3, 2) >> > (dev_c, dev_a, dev_b);
-    addKernel << <3, dim3(3, 3) >> > (dev_c, dev_a, dev_b);*/
-
-    addKernel << <dim3(2, 3), dim3(2, 2) >> > (dev_c, dev_a, dev_b);
+    addKernel<<<1, 5>>>(dev_c, dev_a, dev_b);
 
     
 
@@ -150,6 +137,7 @@ Error:
 
 }
 
+/*
 // Helper function for using CUDA to add vectors in parallel.
 cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
 {
@@ -206,7 +194,7 @@ cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
         fprintf(stderr, "addKernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
         goto Error;
     }
-    
+
     // cudaDeviceSynchronize waits for the kernel to finish, and returns
     // any errors encountered during the launch.
     cudaStatus = cudaDeviceSynchronize();
@@ -226,6 +214,7 @@ Error:
     cudaFree(dev_c);
     cudaFree(dev_a);
     cudaFree(dev_b);
-    
+
     return cudaStatus;
 }
+*/
