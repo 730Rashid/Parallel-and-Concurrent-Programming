@@ -1,2 +1,2 @@
-PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.44.35207:TargetPlatformVersion=10.0.26100.0:
-Debug|x64|C:\Users\756670\Source\Repos\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\|
+PlatformToolSet=v145:VCToolArchitecture=Native64Bit:VCToolsVersion=14.50.35717:VCServicingVersionCompilers=14.50.35723:TargetPlatformVersion=10.0.26100.0:VcpkgTriplet=x64-windows:
+Debug|x64|C:\Users\iiras\OneDrive\Documents\2026_Hull\Parellel_and_Concurrent_Programming\Parallel-and-Concurrent-Programming\Parallel-and-Concurrent-Programming\Lab1_VectorAdd\|
