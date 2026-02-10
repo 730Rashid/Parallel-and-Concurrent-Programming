@@ -7,10 +7,15 @@
 
 __global__ void addKernel(int *c, const int *a, const int *b)
 {
-    int i = threadIdx.x;
-
-    printf("blockIdx.x = %d, threadIdx.x = %d -> Global Index i = %d\n",
-           blockIdx.x, threadIdx.x, i);
+    // int i = threadIdx.x; // Excercise 1:
+    // int i = blockIdx.x * blockDim.x + threadIdx.x; // Excercise 2:
+    // int i = threadIdx.x; // Excercise 3:
+    // int i = threadIdx.y * blockDim.x + threadIdx.x; // Excercise 4:
+    
+    // Excercise 5:
+    int blockId = blockIdx.y * gridDim.x + blockIdx.x; 
+    int threadId = threadIdx.y * blockDim.x + threadIdx.x;
+    int i = blockId * (blockDim.x * blockDim.y) + threadId; 
 
     if (i < 50) {
         c[i] = a[i] + b[i];
@@ -94,7 +99,11 @@ int main()
     printf("Launching Kernel...\n");
     cudaEventRecord(start);
 
-    addKernel<<<1, 5>>>(dev_c, dev_a, dev_b);
+    // addKernel<<<1, 5>>>(dev_c, dev_a, dev_b); // Excercise 1:
+    // addKernel<<<3, 2>>>(dev_c, dev_a, dev_b); // Excercise 2:
+    // addKernel<<<1, dim3(2, 3)>>>(dev_c, dev_a, dev_b); // Excercise 3:
+    // addKernel<<<1, dim3(3, 2)>>>(dev_c, dev_a, dev_b); // Excercise 4:
+    addKernel<<<dim3(2, 3), dim3(2, 2)>>>(dev_c, dev_a, dev_b); // Excercise 5:
 
     
 
