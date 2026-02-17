@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7E9A3F5-4168-B2D4-3A9F-16D05E4B8C72}|CPU_GPU\\CPU_GPU.vcxproj|C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_GPU\\kernel.cu||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C7E9A3F5-4168-B2D4-3A9F-16D05E4B8C72}|CPU_GPU\\CPU_GPU.vcxproj|solutionrelative:CPU_GPU\\kernel.cu||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3F5C7E9-B241-4D68-9F3A-72E4B8C16D05}|CPU_only\\CPU_only.vcxproj|C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_only\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3F5C7E9-B241-4D68-9F3A-72E4B8C16D05}|CPU_only\\CPU_only.vcxproj|solutionrelative:CPU_only\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "kernel.cu",
+              "DocumentMoniker": "C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_GPU\\kernel.cu",
+              "RelativeDocumentMoniker": "CPU_GPU\\kernel.cu",
+              "ToolTip": "C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_GPU\\kernel.cu",
+              "RelativeToolTip": "CPU_GPU\\kernel.cu",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T13:01:06.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_only\\main.cpp",
+              "RelativeDocumentMoniker": "CPU_only\\main.cpp",
+              "ToolTip": "C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_only\\main.cpp",
+              "RelativeToolTip": "CPU_only\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-17T13:02:52.799Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
