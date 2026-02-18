@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "CPU_GPU\\kernel.cu",
               "ToolTip": "C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_GPU\\kernel.cu",
               "RelativeToolTip": "CPU_GPU\\kernel.cu",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADEAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-02-17T13:01:06.396Z",
               "EditorCaption": ""
@@ -45,10 +45,9 @@
               "RelativeDocumentMoniker": "CPU_only\\main.cpp",
               "ToolTip": "C:\\CUDA_Work\\Parallel-and-Concurrent-Programming\\Lab3_Memory_Management_Dot_Product\\CPU_only\\main.cpp",
               "RelativeToolTip": "CPU_only\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-17T13:02:52.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T13:02:52.799Z"
             }
           ]
         }

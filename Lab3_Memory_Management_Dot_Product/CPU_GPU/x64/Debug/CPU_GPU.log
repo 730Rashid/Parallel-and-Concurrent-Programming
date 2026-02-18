@@ -3,9 +3,7 @@
   C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_Dot_Product\CPU_GPU>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -I"C:\Users\iiras\vcpkg\installed\x64-windows\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include"  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -allow-unsupported-compiler -g  -DWIN32 -DWIN64 -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /FS /Zi  /MD " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_Dot_Product\CPU_GPU\x64\Debug\kernel.cu.obj "C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_Dot_Product\CPU_GPU\kernel.cu" 
 CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
   kernel.cu
-  tmpxft_00006ab0_00000000-7_kernel.cudafe1.cpp
-     Creating library C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_Dot_Product\x64\Debug\CPU_GPU.lib and object C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_Dot_Product\x64\Debug\CPU_GPU.exp
-LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  tmpxft_00007614_00000000-7_kernel.cudafe1.cpp
   CPU_GPU.vcxproj -> C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_Dot_Product\x64\Debug\CPU_GPU.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

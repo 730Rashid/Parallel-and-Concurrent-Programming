@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_&amp;_Dot_Product\x64\Debug\CPU_only.exe</FullPath>
+      <FullPath>C:\CUDA_Work\Parallel-and-Concurrent-Programming\Lab3_Memory_Management_Dot_Product\x64\Debug\CPU_only.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

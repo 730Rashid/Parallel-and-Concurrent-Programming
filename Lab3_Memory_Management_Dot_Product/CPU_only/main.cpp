@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Exercise 1.1: CPU-Only Dot Product (Gold Standard)
+// Exercise 1.1: CPU-Only Dot Product 
 
 int main() {
     
