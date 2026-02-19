@@ -43,8 +43,7 @@ void runConfig(int* a, int* b, int* c, int arraySize, int numBlocks, int threads
         dotProduct += c[i];
     }
 
-    printf("<<<%d, %d>>> -> %d subtotal(s), Dot Product = %d\n",
-        numBlocks, threadsPerBlock, numBlocks, dotProduct);
+    printf("<<<%d, %d>>> -> %d subtotal(s), Dot Product = %d\n", numBlocks, threadsPerBlock, numBlocks, dotProduct);
 }
 
 int main()

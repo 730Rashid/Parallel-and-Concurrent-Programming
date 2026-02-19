@@ -37,6 +37,8 @@ int main() {
     }
 
     printf("CPU Dot Product = %d\n", result);
+
+    
     return 0;
 }
 ```
